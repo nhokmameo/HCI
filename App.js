@@ -8,6 +8,10 @@ import { AppLoading } from 'expo';
 import profileScreen from "./screens/profileScreen.js";
 import profileDetail from "./screens/profileDetail.js";
 import bookYard from "./screens/bookYard.js";
+import loginScreen from "./screens/loginScreen.js";
+import bookingScreen from "./screens/bookingScreen.js";
+
+
 
 import * as Font from 'expo-font';
 
@@ -37,9 +41,25 @@ const Container = createStackNavigator(
       },
     },
 
+    loginScreen: {
+      screen: loginScreen,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+      },
+    },
+
+    bookingScreen: {
+      screen: bookingScreen,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+      },
+    },
+
   },
   {
-    initialRouteName: "bookYard",
+    initialRouteName: "bookingScreen",
   }
 );
 
