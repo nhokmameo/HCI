@@ -59,7 +59,7 @@ const Container = createStackNavigator(
 
   },
   {
-    initialRouteName: "bookingScreen",
+    initialRouteName: "loginScreen",
   }
 );
 
