@@ -34,7 +34,7 @@ export default class ProfileScreen extends Component {
                 flexDirection: "row",
               }}
             >
-              <Text style={{ fontSize: 20, marginLeft: 25, marginTop: 20 }}>
+              <Text style={{ fontSize: 20, marginLeft: "5%", marginTop: 20 }}>
                 Thông tin cá nhân
               </Text>
               <TouchableOpacity
@@ -47,7 +47,7 @@ export default class ProfileScreen extends Component {
                     width: 20,
                     height: 20,
                     marginTop: 25,
-                    marginLeft: 160,
+                    marginLeft: "60%",
                   }}
                   source={require("../assets/images/editIcon.png")}
                 />
@@ -64,7 +64,7 @@ export default class ProfileScreen extends Component {
                   borderWidth: 1,
                   alignItems: "center",
                   alignContent: "center",
-                  marginLeft: 25,
+                  marginLeft: "5%",
                   marginTop: 10,
                 }}
               >
@@ -78,12 +78,11 @@ export default class ProfileScreen extends Component {
               <View
                 style={{
                   marginTop: 10,
-                  marginLeft: 10,
+                  marginLeft: "5%",
                   flexDirection: "column",
                 }}
               >
                 <Text style={{ fontSize: 25 }}>Danh Nguyen</Text>
-
                 <View
                   style={{
                     flexDirection: "row",
@@ -125,7 +124,7 @@ export default class ProfileScreen extends Component {
                   style={{
                     width: 40,
                     height: 40,
-                    marginLeft: 20,
+                    marginLeft: "5%",
                     marginTop: 25,
                   }}
                   source={require("../assets/images/heartIcon.png")}
@@ -134,7 +133,7 @@ export default class ProfileScreen extends Component {
                   style={{
                     width: "70%",
                     flexDirection: "column",
-                    marginLeft: 10,
+                    marginLeft: "5%",
                   }}
                 >
                   <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20 }}>
@@ -156,7 +155,7 @@ export default class ProfileScreen extends Component {
                   style={{
                     width: 45,
                     height: 45,
-                    marginLeft: 25,
+                    marginLeft: "5%",
                     marginTop: 20,
                   }}
                   source={require("../assets/images/yardIcon.png")}
@@ -191,7 +190,7 @@ export default class ProfileScreen extends Component {
                   style={{
                     width: 53,
                     height: 53,
-                    marginLeft: 20,
+                    marginLeft: "4%",
                     marginTop: 15,
                   }}
                   source={require("../assets/images/questionIcon.png")}
@@ -211,7 +210,7 @@ export default class ProfileScreen extends Component {
                   style={{
                     width: 35,
                     height: 35,
-                    marginLeft: 20,
+                    marginLeft: "4%",
                     marginTop: 25,
                   }}
                   source={require("../assets/images/historyIcon.png")}
@@ -231,7 +230,7 @@ export default class ProfileScreen extends Component {
                   style={{
                     width: 35,
                     height: 35,
-                    marginLeft: 25,
+                    marginLeft: "4%",
                     marginTop: 20,
                   }}
                   source={require("../assets/images/logoutIcon.png")}
@@ -295,7 +294,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "column",
     marginTop: 5,
-    backgroundColor: "#F1EEEB",
+    backgroundColor: "#FAFAFA",
     height: 500,
   },
 
