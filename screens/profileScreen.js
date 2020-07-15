@@ -15,7 +15,6 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import NavigationService from "../service/navigation";
 import { FontAwesome } from "@expo/vector-icons";
 import Icon from "react-native-vector-icons/Ionicons";
-import { Container, Fab } from "native-base";
 
 const height = Dimensions.get("screen").height;
 const width = Dimensions.get("screen").width;
@@ -155,9 +154,9 @@ export default class ProfileScreen extends Component {
               <View style={styles.BodyContent}>
                 <Image
                   style={{
-                    width: 40,
-                    height: 40,
-                    marginLeft: 20,
+                    width: 45,
+                    height: 45,
+                    marginLeft: 25,
                     marginTop: 20,
                   }}
                   source={require("../assets/images/yardIcon.png")}
@@ -190,15 +189,15 @@ export default class ProfileScreen extends Component {
               <View style={styles.BodyContent}>
                 <Image
                   style={{
-                    width: 40,
-                    height: 40,
-                    marginLeft: 10,
-                    marginTop: 20,
+                    width: 53,
+                    height: 53,
+                    marginLeft: 20,
+                    marginTop: 15,
                   }}
                   source={require("../assets/images/questionIcon.png")}
                 />
                 <View style={{ width: "70%", flexDirection: "column" }}>
-                  <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 25 }}>
+                  <Text style={{ fontSize: 18, marginLeft: 14, marginTop: 30 }}>
                     FAQs
                   </Text>
                 </View>
@@ -210,15 +209,15 @@ export default class ProfileScreen extends Component {
               <View style={styles.BodyContent}>
                 <Image
                   style={{
-                    width: 30,
-                    height: 30,
-                    marginLeft: 10,
-                    marginTop: 30,
+                    width: 35,
+                    height: 35,
+                    marginLeft: 20,
+                    marginTop: 25,
                   }}
                   source={require("../assets/images/historyIcon.png")}
                 />
                 <View style={{ width: "70%", flexDirection: "column" }}>
-                  <Text style={{ fontSize: 18, marginLeft: 20, marginTop: 30 }}>
+                  <Text style={{ fontSize: 18, marginLeft: 25, marginTop: 30 }}>
                     Lịch sử
                   </Text>
                 </View>
@@ -230,15 +229,15 @@ export default class ProfileScreen extends Component {
               <View style={styles.BodyContent}>
                 <Image
                   style={{
-                    width: 30,
-                    height: 30,
-                    marginLeft: 20,
-                    marginTop: 30,
+                    width: 35,
+                    height: 35,
+                    marginLeft: 25,
+                    marginTop: 20,
                   }}
                   source={require("../assets/images/logoutIcon.png")}
                 />
                 <View style={{ width: "70%", flexDirection: "column" }}>
-                  <Text style={{ fontSize: 18, marginLeft: 20, marginTop: 30 }}>
+                  <Text style={{ fontSize: 18, marginLeft: 24, marginTop: 25 }}>
                     Log out
                   </Text>
                 </View>
