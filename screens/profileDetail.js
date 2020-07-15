@@ -75,12 +75,12 @@ export default class profileDetail extends Component {
 
                 <View style={{ flexDirection: 'row', marginTop: 30 }}>
                   <Text style={{ fontSize: 18, marginLeft: 10 }}>Tên</Text>
-                  <Text style={{ fontSize: 16, marginLeft: 70, color: '#BDBBB9' }}>Danh</Text>
+                  <Text style={{ fontSize: 16, marginLeft: 70, color: '#BDBBB9' }}>Danh Nguyen</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                   <Text style={{ fontSize: 18, marginLeft: 10 }}>Liên hệ</Text>
-                  <Text style={{ fontSize: 16, marginLeft: 40, color: '#BDBBB9' }}>039625486123</Text>
+                  <Text style={{ fontSize: 16, marginLeft: 40, color: '#BDBBB9' }}> 999 899 888 99</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
