@@ -10,6 +10,7 @@ import profileDetail from "./screens/profileDetail.js";
 import bookYard from "./screens/bookYard.js";
 import loginScreen from "./screens/loginScreen.js";
 import bookingScreen from "./screens/bookingScreen.js";
+import FAQs from "./screens/FAQs.js";
 
 
 
@@ -19,6 +20,14 @@ const Container = createStackNavigator(
   {
     profileScreen: {
       screen: profileScreen,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+      },
+    },
+
+    FAQs: {
+      screen: FAQs,
       navigationOptions: {
         header: null,
         gesturesEnabled: false,
@@ -59,7 +68,7 @@ const Container = createStackNavigator(
 
   },
   {
-    initialRouteName: "bookingScreen",
+    initialRouteName: "profileScreen",
   }
 );
 

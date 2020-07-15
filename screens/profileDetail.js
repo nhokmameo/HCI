@@ -54,9 +54,11 @@ export default class profileDetail extends Component {
                     <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20,marginLeft:120,color:'blue' }}>Chỉnh sửa</Text>
                   </TouchableOpacity>
                 </View>
-                <Image
-                  style={{ width: 200, height: 200, marginTop: 15,marginLeft:100,borderRadius:100 }}
-                  source={require("../assets/images/avatarProfile.jpg")} />
+              <View style={{ width: '100%', height: 300, marginTop: 15, alignItems:'center', borderRadius: 100 }}>
+                  <Image
+                    style={{ width: 200, height: 200, marginTop: 15, borderRadius: 100 }}
+                    source={require("../assets/images/avatarProfile.jpg")} />
+                </View>
               </View>
 
 
