@@ -26,7 +26,7 @@ export default class profileDetail extends Component {
           {/* Header */}
           <View style={styles.header}>
 
-            <View style={{ height: 50, marginTop: 20, width: "100%", flexDirection: 'row' }}>
+            <View style={{ height: 50, width: "100%", flexDirection: 'row' }}>
               <TouchableOpacity
                 onPress={() => {
                   NavigationService.navigate("profileScreen");
