@@ -29,7 +29,6 @@ export default class ProfileScreen extends Component {
             <View
               style={{
                 height: 50,
-                marginTop: 20,
                 width: "100%",
                 flexDirection: "row",
               }}
@@ -115,165 +114,166 @@ export default class ProfileScreen extends Component {
           </View>
 
           {/* Body */}
-
-          <View style={styles.Body}>
-            {/* Sport like */}
-            <TouchableOpacity>
-              <View style={styles.BodyContent}>
-                <Image
-                  style={{
-                    width: 40,
-                    height: 40,
-                    marginLeft: "5%",
-                    marginTop: 25,
-                  }}
-                  source={require("../assets/images/heartIcon.png")}
-                />
-                <View
-                  style={{
-                    width: "70%",
-                    flexDirection: "column",
-                    marginLeft: "5%",
-                  }}
-                >
-                  <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20 }}>
-                    Môn thể thao bạn thích
-                  </Text>
-                  <Text
-                    style={{ fontSize: 12, marginLeft: 10, color: "#BDBBB9" }}
+          <ScrollView style={styles.Body}>
+            <View style={styles.Body}>
+              {/* Sport like */}
+              <TouchableOpacity>
+                <View style={styles.BodyContent}>
+                  <Image
+                    style={{
+                      width: 40,
+                      height: 40,
+                      marginLeft: "5%",
+                      marginTop: 25,
+                    }}
+                    source={require("../assets/images/heartIcon.png")}
+                  />
+                  <View
+                    style={{
+                      width: "70%",
+                      flexDirection: "column",
+                      marginLeft: "5%",
+                    }}
                   >
-                    Bóng đá, cầu lông, bơi lội
+                    <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20 }}>
+                      Môn thể thao bạn thích
                   </Text>
+                    <Text
+                      style={{ fontSize: 12, marginLeft: 10, color: "#BDBBB9" }}
+                    >
+                      Bóng đá, cầu lông, bơi lội
+                  </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
 
-            {/* Yard like */}
-            <TouchableOpacity>
-              <View style={styles.BodyContent}>
-                <Image
-                  style={{
-                    width: 45,
-                    height: 45,
-                    marginLeft: "5%",
-                    marginTop: 20,
-                  }}
-                  source={require("../assets/images/yardIcon.png")}
-                />
-                <View
-                  style={{
-                    width: "70%",
-                    flexDirection: "column",
-                    marginLeft: 10,
-                  }}
-                >
-                  <Text style={{ fontSize: 16, marginLeft: 10, marginTop: 20 }}>
-                    Sân yêu thích
-                  </Text>
-                  <Text
-                    style={{ fontSize: 12, marginLeft: 10, color: "#BDBBB9" }}
+              {/* Yard like */}
+              <TouchableOpacity>
+                <View style={styles.BodyContent}>
+                  <Image
+                    style={{
+                      width: 45,
+                      height: 45,
+                      marginLeft: "5%",
+                      marginTop: 20,
+                    }}
+                    source={require("../assets/images/yardIcon.png")}
+                  />
+                  <View
+                    style={{
+                      width: "70%",
+                      flexDirection: "column",
+                      marginLeft: 10,
+                    }}
                   >
-                    Sân Viettel
+                    <Text style={{ fontSize: 16, marginLeft: 10, marginTop: 20 }}>
+                      Sân yêu thích
                   </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-
-            {/* Rule */}
-            <TouchableOpacity
-              onPress={() => {
-                NavigationService.navigate("FAQs");
-              }}
-            >
-              <View style={styles.BodyContent}>
-                <Image
-                  style={{
-                    width: 53,
-                    height: 53,
-                    marginLeft: "4%",
-                    marginTop: 15,
-                  }}
-                  source={require("../assets/images/questionIcon.png")}
-                />
-                <View style={{ width: "70%", flexDirection: "column" }}>
-                  <Text style={{ fontSize: 18, marginLeft: 14, marginTop: 30 }}>
-                    FAQs
+                    <Text
+                      style={{ fontSize: 12, marginLeft: 10, color: "#BDBBB9" }}
+                    >
+                      Sân Viettel
                   </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
 
-            {/* History */}
-            <TouchableOpacity>
-              <View style={styles.BodyContent}>
-                <Image
-                  style={{
-                    width: 35,
-                    height: 35,
-                    marginLeft: "4%",
-                    marginTop: 25,
-                  }}
-                  source={require("../assets/images/historyIcon.png")}
-                />
-                <View style={{ width: "70%", flexDirection: "column" }}>
-                  <Text style={{ fontSize: 18, marginLeft: 25, marginTop: 30 }}>
-                    Lịch sử
+              {/* Rule */}
+              <TouchableOpacity
+                onPress={() => {
+                  NavigationService.navigate("FAQs");
+                }}
+              >
+                <View style={styles.BodyContent}>
+                  <Image
+                    style={{
+                      width: 53,
+                      height: 53,
+                      marginLeft: "4%",
+                      marginTop: 15,
+                    }}
+                    source={require("../assets/images/questionIcon.png")}
+                  />
+                  <View style={{ width: "70%", flexDirection: "column" }}>
+                    <Text style={{ fontSize: 18, marginLeft: 14, marginTop: 30 }}>
+                      FAQs
                   </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
 
-            {/* Log out */}
-            <TouchableOpacity>
-              <View style={styles.BodyContent}>
-                <Image
-                  style={{
-                    width: 35,
-                    height: 35,
-                    marginLeft: "4%",
-                    marginTop: 20,
-                  }}
-                  source={require("../assets/images/logoutIcon.png")}
-                />
-                <View style={{ width: "70%", flexDirection: "column" }}>
-                  <Text style={{ fontSize: 18, marginLeft: 24, marginTop: 25 }}>
-                    Log out
+              {/* History */}
+              <TouchableOpacity>
+                <View style={styles.BodyContent}>
+                  <Image
+                    style={{
+                      width: 35,
+                      height: 35,
+                      marginLeft: "4%",
+                      marginTop: 25,
+                    }}
+                    source={require("../assets/images/historyIcon.png")}
+                  />
+                  <View style={{ width: "70%", flexDirection: "column" }}>
+                    <Text style={{ fontSize: 18, marginLeft: 25, marginTop: 30 }}>
+                      Lịch sử
                   </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-          </View>
+              </TouchableOpacity>
 
-          {/* Bottom */}
-          <View style={styles.Bottom}>
-            <TouchableOpacity>
-              <View>
-                <Icon
-                  style={[
-                    { width: 30, height: 30, marginTop: 16, color: "#81857F" },
-                  ]}
-                  size={35}
-                  name={"ios-home"}
-                />
-              </View>
-            </TouchableOpacity>
+              {/* Log out */}
+              <TouchableOpacity>
+                <View style={styles.BodyContent}>
+                  <Image
+                    style={{
+                      width: 35,
+                      height: 35,
+                      marginLeft: "4%",
+                      marginTop: 20,
+                    }}
+                    source={require("../assets/images/logoutIcon.png")}
+                  />
+                  <View style={{ width: "70%", flexDirection: "column" }}>
+                    <Text style={{ fontSize: 18, marginLeft: 24, marginTop: 25 }}>
+                      Log out
+                  </Text>
+                  </View>
+                </View>
+              </TouchableOpacity>
+            </View>
 
-            <TouchableOpacity
-              onPress={() => {
-                NavigationService.navigate("profileScreen");
-              }}
-            >
-              <View>
-                <Icon
-                  style={[
-                    { width: 30, height: 30, marginTop: 16, color: "#81857F" },
-                  ]}
-                  size={35}
-                  name={"ios-person"}
-                />
-              </View>
-            </TouchableOpacity>
-          </View>
+            {/* Bottom */}
+            <View style={styles.Bottom}>
+              <TouchableOpacity>
+                <View>
+                  <Icon
+                    style={[
+                      { width: 30, height: 30, marginTop: 16, color: "#81857F" },
+                    ]}
+                    size={35}
+                    name={"ios-home"}
+                  />
+                </View>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  NavigationService.navigate("profileScreen");
+                }}
+              >
+                <View>
+                  <Icon
+                    style={[
+                      { width: 30, height: 30, marginTop: 16, color: "#81857F" },
+                    ]}
+                    size={35}
+                    name={"ios-person"}
+                  />
+                </View>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
         </View>
       </SafeAreaView>
     );
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     marginTop: 5,
     backgroundColor: "#FAFAFA",
-    height: 500,
+    height: Dimensions.get('screen').height
   },
 
   BodyContent: {
@@ -314,7 +314,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 20,
     borderColor: "grey",
-    position: "absolute",
     backgroundColor: "white",
     justifyContent: "space-around",
   },
