@@ -4,12 +4,14 @@ import {
     KeyboardAvoidingView, Keyboard, TouchableWithoutFeedback
 } from 'react-native';
 import NavigationService from '../service/navigation';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default class loginScreen extends Component {
     state = {
         username: '',
-        password: ''
-
+        password: '',
+        secureTextEntry: true,
+        iconName: 'eye'
     }
 
     handleLogin = () => {
@@ -26,11 +28,19 @@ export default class loginScreen extends Component {
         return true;
     }
 
+    onIconPress = () => {
+        let iconName = (this.state.secureTextEntry) ? "eye-off" : "eye"
+        this.setState({
+            secureTextEntry: !this.state.secureTextEntry,
+            iconName: iconName
+        })
+    }
+
     render() {
         const {
             username,
-            password
-
+            password,
+            iconName
 
         } = this.state;
         return (
@@ -49,13 +59,17 @@ export default class loginScreen extends Component {
 
                         <View style={styles.inputContainer}>
                             <View style={styles.usernameInput}>
-                                <TextInput placeholder="Username/email"
+                                <TextInput style={{ marginLeft: 20 }} placeholder="Username/email"
                                     onChangeText={(value) => this.setState({ username: value })} />
                             </View>
 
                             <View style={styles.passwordInput}>
-                                <TextInput placeholder="Password" secureTextEntry={true}
+                                <TextInput style={{ width: 100, marginLeft: 20 }} placeholder="Password" secureTextEntry={this.state.secureTextEntry}
                                     onChangeText={(value) => this.setState({ password: value })} />
+
+                                <TouchableOpacity onPress={this.onIconPress}>
+                                    <MaterialCommunityIcons style={{ marginRight: 20 }} name={this.state.iconName} size={24} color="black" />
+                                </TouchableOpacity>
                             </View>
 
                             <View style={styles.register}>
@@ -119,8 +133,11 @@ const styles = StyleSheet.create({
         borderColor: 'white',
         backgroundColor: 'white',
         justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 20
+        // alignItems: 'center',
+        justifyContent: 'center',
+
+        borderRadius: 20,
+
 
     },
     passwordInput: {
@@ -129,10 +146,11 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'white',
         backgroundColor: 'white',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         borderRadius: 20,
-        marginTop: 20
+        marginTop: 20,
+        flexDirection: 'row'
     },
     inputContainer: {
         alignItems: 'center',
