@@ -51,7 +51,7 @@ export default class profileDetail extends Component {
               <View style={{ width: "70%", flexDirection: 'row' }}>
                 <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20, marginLeft: 30 }}>Ảnh đại diện</Text>
                 <TouchableOpacity>
-                  <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20, marginLeft: 120, color: 'blue' }}>Chỉnh sửa</Text>
+                  <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20, marginLeft: "55%", color: 'blue' }}>Chỉnh sửa</Text>
                 </TouchableOpacity>
               </View>
               <View style={{ width: '100%', height: 300, marginTop: 15, alignItems: 'center' }}>
@@ -69,7 +69,7 @@ export default class profileDetail extends Component {
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                   <Text style={{ fontSize: 25, marginLeft: 10 }}>Chi tiết</Text>
                   <TouchableOpacity>
-                    <Text style={{ fontSize: 18, marginLeft: 170, marginTop: 10, color: 'blue' }}>Chỉnh sửa</Text>
+                    <Text style={{ fontSize: 18, marginLeft: "60%", marginTop: 10, color: 'blue' }}>Chỉnh sửa</Text>
                   </TouchableOpacity>
                 </View>
 
