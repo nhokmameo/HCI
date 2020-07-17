@@ -288,6 +288,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "column",
     width: "100%",
+
   },
 
   Body: {
@@ -295,7 +296,8 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     marginTop: 5,
     backgroundColor: "#FAFAFA",
-    height: Dimensions.get('screen').height
+    height: Dimensions.get('screen').height,
+
   },
 
   BodyContent: {
@@ -305,6 +307,7 @@ const styles = StyleSheet.create({
     height: 80,
     flexDirection: "row",
     backgroundColor: "white",
+
   },
 
   Bottom: {

@@ -33,10 +33,10 @@ export default class profileDetail extends Component {
                 }}
               >
                 <Image
-                  style={{ width: 20, height: 20, marginTop: 25, marginLeft: 20 }}
+                  style={{ width: 20, height: 20, marginTop: 25, marginLeft: "5%" }}
                   source={require("../assets/images/backIcon.png")} />
               </TouchableOpacity>
-              <Text style={{ fontSize: 20, marginLeft: 25, marginTop: 20 }}>Chỉnh sửa trang cá nhân</Text>
+              <Text style={{ fontSize: 20, marginLeft: "5%", marginTop: 20 }}>Chỉnh sửa trang cá nhân</Text>
             </View>
           </View>
 
@@ -51,7 +51,7 @@ export default class profileDetail extends Component {
               <View style={{ width: "70%", flexDirection: 'row' }}>
                 <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20, marginLeft: 30 }}>Ảnh đại diện</Text>
                 <TouchableOpacity>
-                  <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20, marginLeft: "55%", color: 'blue' }}>Chỉnh sửa</Text>
+                  <Text style={{ fontSize: 18, marginTop: 20, marginLeft: "60%", color: 'blue' }}>Chỉnh sửa</Text>
                 </TouchableOpacity>
               </View>
               <View style={{ width: '100%', height: 300, marginTop: 15, alignItems: 'center' }}>
@@ -67,9 +67,9 @@ export default class profileDetail extends Component {
               <View style={{ width: "70%", flexDirection: 'column' }}>
 
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
-                  <Text style={{ fontSize: 25, marginLeft: 10 }}>Chi tiết</Text>
+                  <Text style={{ fontSize: 25, marginLeft: "5%" }}>Chi tiết</Text>
                   <TouchableOpacity>
-                    <Text style={{ fontSize: 18, marginLeft: "60%", marginTop: 10, color: 'blue' }}>Chỉnh sửa</Text>
+                    <Text style={{ fontSize: 18, marginLeft: "65%", marginTop: 10, color: 'blue' }}>Chỉnh sửa</Text>
                   </TouchableOpacity>
                 </View>
 
@@ -120,12 +120,14 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.9,
     marginLeft: 10,
     height: 80,
+    flex: 1,
   },
 
   Body: {
     width: "100%",
     flexDirection: "column",
     marginTop: 5,
+    flex: 1,
   },
 
   BodyContent: {
@@ -136,6 +138,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderBottomWidth: 0.9,
     marginLeft: 10,
+    flex: 1,
   },
 
   BodyContent2: {
@@ -144,6 +147,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "white",
     marginLeft: 10,
+    flex: 1,
   },
 
 });
