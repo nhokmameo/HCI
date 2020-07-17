@@ -49,7 +49,7 @@ export default class loginScreen extends Component {
 
                         <View style={styles.inputContainer}>
                             <View style={styles.usernameInput}>
-                                <TextInput placeholder="Username/email"
+                                <TextInput placeholder="Username/email" style={{ height: 200, width: 300 }}
                                     onChangeText={(value) => this.setState({ username: value })} />
                             </View>
 

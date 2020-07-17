@@ -15,6 +15,8 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import NavigationService from "../service/navigation";
 import { FontAwesome } from "@expo/vector-icons";
 import Icon from "react-native-vector-icons/Ionicons";
+import { Appbar } from 'react-native-paper';
+import { Feather } from "@expo/vector-icons";
 
 const height = Dimensions.get("screen").height;
 const width = Dimensions.get("screen").width;
@@ -23,35 +25,26 @@ export default class ProfileScreen extends Component {
   render() {
     return (
       <SafeAreaView>
+
+        <Appbar.Header style={{ backgroundColor: "#439024", justifyContent: 'center' }}>
+          <Appbar.BackAction
+            onPress={() => {
+              NavigationService.navigate("profileScreen");
+            }}
+          />
+          <Appbar.Content title="Thông tin cá nhân" />
+          {/* <Appbar.Action icon="magnify" onPress={() => { }} /> */}
+          <Feather name="edit" size={24} color="#E9E7E3" style={{ marginRight: '5%' }}
+            onPress={() => {
+              NavigationService.navigate("profileDetail");
+            }}
+          />
+        </Appbar.Header>
+
         <View style={styles.profile}>
-          {/* Header */}
+
           <View style={styles.header}>
-            <View
-              style={{
-                height: 50,
-                width: "100%",
-                flexDirection: "row",
-              }}
-            >
-              <Text style={{ fontSize: 20, marginLeft: "5%", marginTop: 20 }}>
-                Thông tin cá nhân
-              </Text>
-              <TouchableOpacity
-                onPress={() => {
-                  NavigationService.navigate("profileDetail");
-                }}
-              >
-                <Image
-                  style={{
-                    width: 20,
-                    height: 20,
-                    marginTop: 25,
-                    marginLeft: "60%",
-                  }}
-                  source={require("../assets/images/editIcon.png")}
-                />
-              </TouchableOpacity>
-            </View>
+
 
             <View style={{ height: 170, width: "100%", flexDirection: "row" }}>
               {/* Avatar iCon */}
@@ -59,24 +52,21 @@ export default class ProfileScreen extends Component {
                 style={{
                   height: "85%",
                   width: "35%",
-                  borderRadius: 20,
-                  borderWidth: 1,
                   alignItems: "center",
                   alignContent: "center",
-                  marginLeft: "5%",
-                  marginTop: 10,
+                  marginTop: "5%",
+                  marginLeft: '5%'
                 }}
               >
                 <Image
-                  style={{ width: 100, height: 130, marginTop: 5 }}
-                  source={require("../assets/images/avatarIcon.png")}
-                />
+                  style={{ width: 150, height: 150, borderRadius: 100 }}
+                  source={require("../assets/images/avatarProfile.jpg")} />
               </View>
 
               {/* Information */}
               <View
                 style={{
-                  marginTop: 10,
+                  marginTop: "10%",
                   marginLeft: "5%",
                   flexDirection: "column",
                 }}
@@ -223,7 +213,11 @@ export default class ProfileScreen extends Component {
               </TouchableOpacity>
 
               {/* Log out */}
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  NavigationService.navigate("loginScreen");
+                }}
+              >
                 <View style={styles.BodyContent}>
                   <Image
                     style={{

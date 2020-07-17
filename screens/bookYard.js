@@ -58,10 +58,10 @@ export default class bookYard extends Component {
                     <View style={styles.Body}>
                         <View style={{ flexDirection: 'row', width: '80%', height: 40, marginTop: 10, marginLeft: 20 }}>
                             <Text style={{ fontSize: 15 }}>4.0</Text>
-                            <FontAwesome name="star" color="#E6F013" size={23} style={{ marginHorizontal: 6 }} />
-                            <FontAwesome name="star" color="#E6F013" size={23} style={{ marginHorizontal: 6 }} />
-                            <FontAwesome name="star" color="#E6F013" size={23} style={{ marginHorizontal: 6 }} />
-                            <FontAwesome name="star" color="#E6F013" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
                             <FontAwesome name="star" color="#F1EEEB" size={23} style={{ marginHorizontal: 6 }} />
                             <Text style={{ fontSize: 15, color: '#4F9E2B' }}> 150 lượt đánh giá</Text>
                         </View>

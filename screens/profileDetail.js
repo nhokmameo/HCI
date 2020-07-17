@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import NavigationService from '../service/navigation';
+import { Appbar } from 'react-native-paper';
 
 
 
@@ -22,24 +23,18 @@ export default class profileDetail extends Component {
   render() {
     return (
       <SafeAreaView>
+
+        <Appbar.Header style={{ backgroundColor: "#439024", justifyContent: 'center' }}>
+          <Appbar.BackAction
+            onPress={() => {
+              NavigationService.navigate("profileScreen");
+            }}
+          />
+          <Appbar.Content title="Chỉnh sửa trang cá nhân" />
+          {/* <Appbar.Action icon="magnify" onPress={() => { }} /> */}
+        </Appbar.Header>
+
         <ScrollView style={styles.profile}>
-          {/* Header */}
-          <View style={styles.header}>
-
-            <View style={{ height: 50, width: "100%", flexDirection: 'row' }}>
-              <TouchableOpacity
-                onPress={() => {
-                  NavigationService.navigate("profileScreen");
-                }}
-              >
-                <Image
-                  style={{ width: 20, height: 20, marginTop: 25, marginLeft: "5%" }}
-                  source={require("../assets/images/backIcon.png")} />
-              </TouchableOpacity>
-              <Text style={{ fontSize: 20, marginLeft: "5%", marginTop: 20 }}>Chỉnh sửa trang cá nhân</Text>
-            </View>
-          </View>
-
 
           {/* Body */}
 
@@ -48,49 +43,50 @@ export default class profileDetail extends Component {
             {/* Avatar*/}
 
             <View style={styles.BodyContent}>
-              <View style={{ width: "70%", flexDirection: 'row' }}>
-                <Text style={{ fontSize: 18, marginLeft: 10, marginTop: 20, marginLeft: 30 }}>Ảnh đại diện</Text>
+              <View style={{ width: "100%", flexDirection: 'row', marginTop: "5%" }}>
+                <Text style={{ fontSize: 18, marginLeft: "5%" }}>Ảnh đại diện</Text>
                 <TouchableOpacity>
-                  <Text style={{ fontSize: 18, marginTop: 20, marginLeft: "60%", color: 'blue' }}>Chỉnh sửa</Text>
+                  <Text style={{ fontSize: 18, marginLeft: "55%", color: 'blue' }}>Chỉnh sửa</Text>
                 </TouchableOpacity>
               </View>
-              <View style={{ width: '100%', height: 300, marginTop: 15, alignItems: 'center' }}>
+
+              <View style={{ width: '100%', height: 300, marginTop: "5%", alignItems: 'center' }}>
                 <Image
-                  style={{ width: 150, height: 200, marginTop: 15 }}
-                  source={require("../assets/images/avatarIcon.png")} />
+                  style={{ width: 200, height: 200, borderRadius: 100 }}
+                  source={require("../assets/images/avatarProfile.jpg")} />
               </View>
             </View>
 
 
             {/* Detail */}
             <View style={styles.BodyContent2}>
-              <View style={{ width: "70%", flexDirection: 'column' }}>
+              <View style={{ width: "100%", flexDirection: 'column' }}>
 
-                <View style={{ flexDirection: 'row', marginTop: 20 }}>
+                <View style={{ flexDirection: 'row', marginTop: "5%" }}>
                   <Text style={{ fontSize: 25, marginLeft: "5%" }}>Chi tiết</Text>
                   <TouchableOpacity>
-                    <Text style={{ fontSize: 18, marginLeft: "65%", marginTop: 10, color: 'blue' }}>Chỉnh sửa</Text>
+                    <Text style={{ fontSize: 18, marginLeft: "58%", marginTop: "3%", color: 'blue' }}>Chỉnh sửa</Text>
                   </TouchableOpacity>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 30 }}>
                   <Text style={{ fontSize: 18, marginLeft: 10 }}>Tên</Text>
-                  <Text style={{ fontSize: 16, marginLeft: 70, color: '#BDBBB9' }}>Danh Nguyen</Text>
+                  <Text style={{ fontSize: 16, marginLeft: 70, color: '#807D79' }}>Danh Nguyen</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                   <Text style={{ fontSize: 18, marginLeft: 10 }}>Liên hệ</Text>
-                  <Text style={{ fontSize: 16, marginLeft: 40, color: '#BDBBB9' }}> 999 899 888 99</Text>
+                  <Text style={{ fontSize: 16, marginLeft: 40, color: '#807D79' }}> 999 899 888 99</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                   <Text style={{ fontSize: 18, marginLeft: 10 }}>Email</Text>
-                  <Text style={{ fontSize: 16, marginLeft: 55, color: '#BDBBB9' }}>god@gmail.com</Text>
+                  <Text style={{ fontSize: 16, marginLeft: 55, color: '#807D79' }}>god@gmail.com</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                   <Text style={{ fontSize: 18, marginLeft: 10 }}>Mật khẩu</Text>
-                  <Text style={{ fontSize: 16, marginLeft: 25, color: '#BDBBB9' }}>******</Text>
+                  <Text style={{ fontSize: 16, marginLeft: 25, color: '#807D79' }}>******</Text>
                 </View>
 
 

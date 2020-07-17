@@ -11,7 +11,7 @@ import bookYard from "./screens/bookYard.js";
 import loginScreen from "./screens/loginScreen.js";
 import bookingScreen from "./screens/bookingScreen.js";
 import FAQs from "./screens/FAQs.js";
-
+import { fromLeft } from 'react-navigation-transitions';
 
 
 import * as Font from 'expo-font';
@@ -69,6 +69,7 @@ const Container = createStackNavigator(
   },
   {
     initialRouteName: "bookYard",
+    transitionConfig: () => fromLeft(),
   }
 );
 
