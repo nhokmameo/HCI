@@ -68,7 +68,7 @@ const Container = createStackNavigator(
 
   },
   {
-    initialRouteName: "profileScreen",
+    initialRouteName: "bookYard",
   }
 );
 
