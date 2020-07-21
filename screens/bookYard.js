@@ -27,38 +27,48 @@ export default class bookYard extends Component {
                 <ScrollView style={styles.profile}>
                     {/* Header */}
                     <View style={styles.header}>
-                            {/* Avatar iCon */}
-                            <View style={{width: "100%", }}>
-                                <ImageBackground
-                                    style={{ width: "100%", height: 300,justifyContent:'flex-end'}}
-                                    source={require("../assets/images/yardImage.jpg")} 
+                        {/* Avatar iCon */}
+                        <View style={{ width: "100%", }}>
+                            <ImageBackground
+                                style={{ width: "100%", height: 300 }}
+                                source={require("../assets/images/yardImage.jpg")}
+                            >
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        NavigationService.navigate("homeScreen");
+                                    }}
                                 >
-                                    <View style={{marginLeft:20,marginBottom:20}}>
-                                        <Text style={{color:'white',fontSize:25}}>Sân Viettel</Text>
-                                        <Text style={{color:'white',fontSize:15}}>158 Hoàng Hoa Thám, Phường 12</Text>
-                                        <Text style={{ color: 'white' }}>Quận Tân Bình, Hồ Chí Minh</Text>
-                                    </View>
-                                </ImageBackground>
-                            </View>
+                                    <Image
+                                        style={{ width: 30, height: 30, marginLeft: "3%", marginTop: "3%" }}
+                                        source={require("../assets/images/back2.png")} />
+                                </TouchableOpacity>
+
+                                <View style={{ marginLeft: "5%", marginBottom: 20, marginTop: '40%' }}>
+                                    <Text style={{ color: 'white', fontSize: 25 }}>Sân Viettel</Text>
+                                    <Text style={{ color: 'white', fontSize: 15 }}>158 Hoàng Hoa Thám, Phường 12</Text>
+                                    <Text style={{ color: 'white' }}>Quận Tân Bình, Hồ Chí Minh</Text>
+                                </View>
+                            </ImageBackground>
+                        </View>
                     </View>
 
 
                     {/* Body */}
 
                     <View style={styles.Body}>
-                        <View style={{flexDirection:'row', width:'80%',height:40,marginTop:10,marginLeft:20}}>
-                            <Text style={{fontSize:15}}>4.0</Text>
-                            <FontAwesome name="star" color="yellow" size={23} style={{marginHorizontal: 6}}/>
-                            <FontAwesome name="star" color="yellow" size={23} style={{ marginHorizontal: 6 }} />
-                            <FontAwesome name="star" color="yellow" size={23} style={{ marginHorizontal: 6 }} />
-                            <FontAwesome name="star" color="yellow" size={23} style={{ marginHorizontal: 6 }} />
-                            <FontAwesome name="star" color="#F1EEEB"  size={23} style={{ marginHorizontal: 6}} />
-                            <Text style={{ fontSize: 15, color:'#4F9E2B' }}> 150 lượt đánh giá</Text>
+                        <View style={{ flexDirection: 'row', width: '80%', height: 40, marginTop: 10, marginLeft: 20 }}>
+                            <Text style={{ fontSize: 15 }}>4.0</Text>
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#FEBC1B" size={23} style={{ marginHorizontal: 6 }} />
+                            <FontAwesome name="star" color="#F1EEEB" size={23} style={{ marginHorizontal: 6 }} />
+                            <Text style={{ fontSize: 15, color: '#4F9E2B' }}> 150 lượt đánh giá</Text>
                         </View>
 
                         <View style={{ flexDirection: 'row', width: '80%', height: 40, marginTop: 10, marginLeft: 20 }}>
-                            <Text style={{ fontSize: 18, color:'#010401'}}> Điện thoại: </Text>
-                            <Text style={{ fontSize: 18, color:'#010401' }}>+84 776 884 985</Text>
+                            <Text style={{ fontSize: 18, color: '#010401' }}> Điện thoại: </Text>
+                            <Text style={{ fontSize: 18, color: '#010401' }}>+84 776 884 985</Text>
                         </View>
 
 
@@ -80,22 +90,24 @@ export default class bookYard extends Component {
                         </View>
 
                         <View style={{ flexDirection: 'row', width: '80%', height: 40, marginTop: 10, marginLeft: 20 }}>
-                            <Text style={{ fontSize: 18, color: '#010401',marginLeft:30,marginTop:10 }}> Các giờ đông khách</Text>
+                            <Text style={{ fontSize: 18, color: '#010401', marginLeft: 30, marginTop: 10 }}> Các giờ đông khách</Text>
                         </View>
-                        
+
                         <View>
                             <Image
-                                style={{ width:"100%", height: 110, marginTop: 15 }}
+                                style={{ width: "100%", height: 110, marginTop: 15 }}
                                 source={require("../assets/images/columnChart.png")}
                             />
                         </View>
 
                         <TouchableOpacity
-                          //  onPress={() => {NavigationService.navigate();}}
+                            onPress={() => {
+                                NavigationService.navigate("bookingScreen");
+                            }}
                         >
                             <View
                                 style={[
-                                    
+
                                     {
                                         backgroundColor: "#4FBA34",
                                         width: "65%",
@@ -107,11 +119,11 @@ export default class bookYard extends Component {
                                         alignItems: 'center',
                                         borderRadius: 10,
                                         marginTop: 35,
-                                        marginLeft:10
+                                        marginLeft: 10
                                     },
                                 ]}
                             >
-                                <Text style={{ color: "#fff", padding: 5,fontSize:20 }}>
+                                <Text style={{ color: "#fff", padding: 5, fontSize: 20 }}>
                                     Đặt Sân
                                 </Text>
                             </View>
@@ -121,10 +133,14 @@ export default class bookYard extends Component {
 
                 </ScrollView>
                 {/* Bottom */}
-                <View style={styles.Bottom}>
-                    <TouchableOpacity> 
+                {/* <View style={styles.Bottom}>
+                    <TouchableOpacity
+                        onPress={() => {
+                            NavigationService.navigate("homeScreen");
+                        }}
+                    >
                         <View>
-                            <Icon style={[{ width: 30, height: 30, marginTop: 16, color:'#81857F' }]}
+                            <Icon style={[{ width: 30, height: 30, marginTop: 16, color: '#81857F' }]}
                                 size={35} name={'ios-home'} />
                         </View>
                     </TouchableOpacity>
@@ -139,7 +155,7 @@ export default class bookYard extends Component {
                                 size={35} name={'ios-person'} />
                         </View>
                     </TouchableOpacity>
-                </View>
+                </View> */}
 
 
             </SafeAreaView>
@@ -161,7 +177,7 @@ const styles = StyleSheet.create({
         width: "100%",
         flexDirection: "column",
         marginTop: 5,
-        height: 610,
+        height: 530,
     },
 
 

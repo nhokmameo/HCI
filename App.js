@@ -10,8 +10,8 @@ import profileDetail from "./screens/profileDetail.js";
 import bookYard from "./screens/bookYard.js";
 import loginScreen from "./screens/loginScreen.js";
 import bookingScreen from "./screens/bookingScreen.js";
-
-
+import homeScreen from "./screens/homeScreen.js";
+import bookSuccess from "./screens/bookSuccess.js";
 
 import * as Font from 'expo-font';
 
@@ -57,9 +57,25 @@ const Container = createStackNavigator(
       },
     },
 
+    homeScreen: {
+      screen: homeScreen,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+      },
+    },
+
+    bookSuccess: {
+      screen: bookSuccess,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+      },
+    },
+
   },
   {
-    initialRouteName: "bookingScreen",
+    initialRouteName: "loginScreen",
   }
 );
 

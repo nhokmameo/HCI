@@ -23,7 +23,7 @@ export default class loginScreen extends Component {
             alert("Please fill password")
             return false;
         } else {
-            NavigationService.navigate("profileScreen");
+            NavigationService.navigate("homeScreen");
         }
         return true;
     }
@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     },
     usernameInput: {
         width: Dimensions.get('screen').width * 8 / 10,
+        maxWidth: '80%',
         height: 50,
         borderWidth: 1,
         borderColor: 'white',
@@ -142,6 +143,7 @@ const styles = StyleSheet.create({
     },
     passwordInput: {
         width: Dimensions.get('screen').width * 8 / 10,
+
         height: 50,
         borderWidth: 1,
         borderColor: 'white',
