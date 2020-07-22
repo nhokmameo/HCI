@@ -1,0 +1,28 @@
+[
+
+    {
+        "id" : 1,
+        "category_title": "jasdkflasdf",
+        "image_url": "require('../assets/images/stadium.jpg')"
+    },
+    {
+        "id" : 2,
+        "category_title": "Tennis",
+        "image_url": "require('../assets/images/tennis.png')"
+    },
+    {
+        "id" : 3,
+        "category_title": "Cầu Lông",
+        "image_url": "require('../assets/images/badminton.png')"
+    },
+    {
+        "id" : 4,
+        "category_title": "Bơi Lội",
+        "image_url": "require('../assets/images/swimming.png')"
+    },
+    {
+        "id" : 5,
+        "category_title": "Bòng Chuyền",
+        "image_url": "require('../assets/images/volleyball.png')"
+    }
+]
