@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import { Appbar, Avatar } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
 
 
@@ -80,7 +81,7 @@ class FlatListItem extends Component {
                 );
             }
         }
-        // 
+        //
     }
 }
 
@@ -219,7 +220,7 @@ const DATA = [
 //     },
 // ];
 
-export default class bookingScreen extends Component {
+ class BookingScreen extends Component {
     state = {
         count: 60,
         time1: '1:00',
@@ -234,8 +235,15 @@ export default class bookingScreen extends Component {
         time10: '10:00',
         time11: '11:00',
         time12: '12:00',
-        value: '0:00'
-
+        value: '0:00',
+        choosen: 'white',
+        stadium1: false,
+        stadium2: false,
+        stadium3: false,
+        stadium4: false,
+        stadium5: false,
+        stadium6: false,
+        price: 0
     }
 
 
@@ -260,7 +268,7 @@ export default class bookingScreen extends Component {
 
 
     render() {
-
+        const { navigation } = this.props;
         const {
 
             count,
@@ -276,18 +284,29 @@ export default class bookingScreen extends Component {
             time10,
             time11,
             time12,
-            value
+            value,
+            choosen,
+            stadium1,
+            stadium2,
+            stadium3,
+            stadium4,
+            stadium5,
+            stadium6,
+            price
 
         } = this.state;
         return (
+
             <View style={styles.container}>
                 <Appbar.Header style={styles.headerContainer}>
-                    <Appbar.BackAction style={styles.backIcon} onPress={() => { }} />
+                    <Appbar.BackAction style={styles.backIcon} onPress={() => {
+                        navigation.navigate("BookingYard");
+                    }} />
                     <Appbar.Content style={styles.titleHeader} title="Sân Viettel" />
                 </Appbar.Header>
                 <ScrollView>
 
-                    <View style={styles.imageContainer}>
+                    {/* <View style={styles.imageContainer}>
                         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
 
                             <View style={styles.imageView}>
@@ -316,7 +335,7 @@ export default class bookingScreen extends Component {
                             </View>
 
                         </ScrollView>
-                    </View>
+                    </View> */}
 
                     <View style={styles.calendar}>
                         <FlatList
@@ -474,52 +493,94 @@ export default class bookingScreen extends Component {
                     <View style={styles.playGround}>
 
                         <View style={styles.eachGround}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                this.setState({
+
+                                    stadium1: !this.state.stadium1,
+
+                                })
+                                if (stadium1 == false) {
+                                    this.setState({ price: price + 65000 })
+                                }
+                                if (stadium1 == true) {
+                                    this.setState({ price: price - 65000 })
+                                }
+                            }}>
                                 <View style={{
                                     height: 100,
                                     width: 180,
                                     borderWidth: 1,
-                                    borderColor: 'green',
+                                    // borderColor: 'green',
                                     marginLeft: 10,
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     marginTop: 10,
+                                    backgroundColor: stadium1 ? 'green' : 'white',
+                                    borderColor: stadium1 ? 'white' : 'green',
+
 
 
                                 }}>
-                                    <Text style={{ fontSize: 20, fontWeight: '800', color: 'green' }}>Sân 1</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '800', color: stadium1 ? 'white' : 'green' }}>Sân 1</Text>
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                this.setState({
+                                    stadium3: !this.state.stadium3
+                                })
+                                if (stadium3 == false) {
+                                    this.setState({ price: price + 65000 })
+                                }
+                                if (stadium3 == true) {
+                                    this.setState({ price: price - 65000 })
+                                }
+                            }}>
                                 <View style={{
                                     height: 100,
                                     width: 180,
                                     borderWidth: 1,
-                                    borderColor: 'green',
+                                    // borderColor: 'green',
                                     marginLeft: 10,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    marginTop: 10
+                                    marginTop: 10,
+                                    backgroundColor: stadium3 ? 'green' : 'white',
+                                    borderColor: stadium3 ? 'white' : 'green',
+
 
                                 }}>
-                                    <Text style={{ fontSize: 20, fontWeight: '800', color: 'green' }}>Sân 3</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '800', color: stadium3 ? 'white' : 'green' }}>Sân 3</Text>
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => {
+                                this.setState({
+                                    stadium5: !this.state.stadium5
+                                })
+                                if (stadium5 == false) {
+                                    this.setState({ price: price + 65000 })
+                                }
+                                if (stadium5 == true) {
+                                    this.setState({ price: price - 65000 })
+                                }
+                            }}>
                                 <View style={{
                                     height: 100,
                                     width: 180,
                                     borderWidth: 1,
-                                    borderColor: 'green',
+                                    // borderColor: 'green',
                                     marginLeft: 10,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    marginTop: 10
+                                    marginTop: 10,
+                                    backgroundColor: stadium5 ? 'green' : 'white',
+                                    borderColor: stadium5 ? 'white' : 'green',
+
 
                                 }}>
-                                    <Text style={{ fontSize: 20, fontWeight: '800', color: 'green' }}>Sân 5</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '800', color: stadium5 ? 'white' : 'green' }}>Sân 5</Text>
                                 </View>
                             </TouchableOpacity>
 
@@ -528,51 +589,92 @@ export default class bookingScreen extends Component {
 
 
                         <View style={styles.eachGround}>
-                            <TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => {
+                                this.setState({
+                                    stadium2: !this.state.stadium2
+                                })
+                                if (stadium2 == false) {
+                                    this.setState({ price: price + 65000 })
+                                }
+                                if (stadium2 == true) {
+                                    this.setState({ price: price - 65000 })
+                                }
+                            }}>
                                 <View style={{
                                     height: 100,
                                     width: 180,
                                     borderWidth: 1,
-                                    borderColor: 'green',
+                                    // borderColor: 'green',
                                     marginRight: 10,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    marginTop: 10
+                                    marginTop: 10,
+                                    backgroundColor: stadium2 ? 'green' : 'white',
+                                    borderColor: stadium2 ? 'white' : 'green',
+
 
                                 }}>
-                                    <Text style={{ fontSize: 20, fontWeight: '800', color: 'green' }}>Sân 2</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '800', color: stadium2 ? 'white' : 'green' }}>Sân 2</Text>
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => {
+                                this.setState({
+                                    stadium4: !this.state.stadium4
+                                })
+                                if (stadium4 == false) {
+                                    this.setState({ price: price + 65000 })
+                                }
+                                if (stadium4 == true) {
+                                    this.setState({ price: price - 65000 })
+                                }
+                            }}>
                                 <View style={{
                                     height: 100,
                                     width: 180,
                                     borderWidth: 1,
-                                    borderColor: 'green',
+                                    // borderColor: 'green',
                                     marginRight: 10,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    marginTop: 10
+                                    marginTop: 10,
+                                    backgroundColor: stadium4 ? 'green' : 'white',
+                                    borderColor: stadium4 ? 'white' : 'green',
+
 
                                 }}>
-                                    <Text style={{ fontSize: 20, fontWeight: '800', color: 'green' }}>Sân 4</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '800', color: stadium4 ? 'white' : 'green' }}>Sân 4</Text>
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => {
+                                this.setState({
+                                    stadium6: !this.state.stadium6
+                                })
+                                if (stadium6 == false) {
+                                    this.setState({ price: price + 65000 })
+                                }
+                                if (stadium6 == true) {
+                                    this.setState({ price: price - 65000 })
+                                }
+                            }}>
                                 <View style={{
                                     height: 100,
                                     width: 180,
                                     borderWidth: 1,
-                                    borderColor: 'green',
+                                    // borderColor: 'green',
                                     marginRight: 10,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    marginTop: 10
+                                    marginTop: 10,
+                                    backgroundColor: stadium6 ? 'green' : 'white',
+                                    borderColor: stadium6 ? 'white' : 'green',
 
                                 }}>
-                                    <Text style={{ fontSize: 20, fontWeight: '800', color: 'green' }}>Sân 6</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '800', color: stadium6 ? 'white' : 'green' }}>Sân 6</Text>
                                 </View>
                             </TouchableOpacity>
 
@@ -598,10 +700,15 @@ export default class bookingScreen extends Component {
                             flexDirection: 'row'
                         }}>
                             <Text style={{ fontSize: 15, fontWeight: '800' }}>Tổng tiền: </Text>
-                            <Text style={{ fontSize: 15, color: 'red', fontWeight: '800' }}>65.000 đ </Text>
+                            <Text style={{ fontSize: 15, color: 'red', fontWeight: '800' }}>{price} đ </Text>
 
                         </View>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => {
+                            if (price > 0) {
+                                navigation.navigate("BookingSuccess");
+                            }
+
+                        }}>
                             <View style={{
                                 width: Dimensions.get('screen').width / 2,
                                 height: 60,
@@ -620,6 +727,11 @@ export default class bookingScreen extends Component {
         );
     };
 }
+
+export default function (props) {
+    const navigation = useNavigation();
+    return <BookingScreen {...props} navigation={navigation} />;
+  }
 
 const styles = StyleSheet.create({
     container: {

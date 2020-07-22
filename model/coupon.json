@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "title": "Buổi trưa năng động",
+        "sale": "10%",
+        "description": "Giảm 10% trên tổng giá trị đơn khi đặt sân từ 10AM đến 2PM"
+    },
+    {
+        "id": 2,
+        "title": "Cả tuần năng động",
+        "sale": "5%",
+        "description": "Giảm 5% trên tổng giá trị đơn dưới đ100.000  khi đặt sân từ thứ 2 đến thứ 6"
+    }
+]
+

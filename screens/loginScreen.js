@@ -3,10 +3,10 @@ import {
     StyleSheet, Text, View, ImageBackground, Dimensions, SafeAreaView, Image, TextInput, TouchableOpacity,
     KeyboardAvoidingView, Keyboard, TouchableWithoutFeedback
 } from 'react-native';
-import NavigationService from '../service/navigation';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
-export default class loginScreen extends Component {
+class LoginScreen extends Component {
     state = {
         username: '',
         password: '',
@@ -23,7 +23,7 @@ export default class loginScreen extends Component {
             alert("Please fill password")
             return false;
         } else {
-            NavigationService.navigate("profileScreen");
+            this.props.navigate("Home");
         }
         return true;
     }
@@ -99,6 +99,11 @@ export default class loginScreen extends Component {
     };
 }
 
+export default function (props) {
+    const navigation = useNavigation();
+    return <LoginScreen {...props} navigation={navigation} />;
+  }
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -128,6 +133,7 @@ const styles = StyleSheet.create({
     },
     usernameInput: {
         width: Dimensions.get('screen').width * 8 / 10,
+        maxWidth: '80%',
         height: 50,
         borderWidth: 1,
         borderColor: 'white',
@@ -142,6 +148,7 @@ const styles = StyleSheet.create({
     },
     passwordInput: {
         width: Dimensions.get('screen').width * 8 / 10,
+
         height: 50,
         borderWidth: 1,
         borderColor: 'white',
